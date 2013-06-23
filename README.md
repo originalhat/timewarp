@@ -8,16 +8,6 @@
 
 https://rubygems.org/gems/TimeWarp
 
-```
-$ gem install TimeWarp
-```
-
-### Including
-
-```ruby
-> require 'TimeWarp'
-```
-
 ### Initialization
 
 ```ruby
