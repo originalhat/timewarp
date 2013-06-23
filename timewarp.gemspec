@@ -7,5 +7,5 @@ Gem::Specification.new do |s|
   s.authors = ["Devin Brown"]
   s.email = 'devin.g.brown@gmail.com'
   s.files = ["lib/timewarp.rb"]
-  s.homepage = 'http://rubygems.org/gems/timewarp'
+  s.homepage = 'https://github.com/devinbrown/timewarp'
 end
