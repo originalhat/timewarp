@@ -34,10 +34,6 @@ class EverAgo
     delta.day
   end
 
-  def self.weeks_ago
-    delta.day / 7 if delta.day > 6 and delta.day || nil
-  end
-
   def self.months_ago
     delta.month - 1
   end
