@@ -2,47 +2,69 @@ require 'date'
 
 class EverAgo
 
-  def self.delta_datetime old
-    new = DateTime.now.new_offset(0)
-
-    puts "old -> #{old}"
-    puts "new -> #{new}"
-
+  def self.delta_time ot
+    @old_time = ot
   end
 
-  private
+  def self.old
+    @old_time.gmtime
+  end
 
-  # time_to_datetime(tt, dt)
+  def self.now
+    Time.now.utc
+  end
 
-  # milliseconds_ago
+  def self.delta
+    Time.at(now - old).utc
+  end
 
-  # seconds_ago
+  def self.seconds_ago
+    delta.sec
+  end
 
-  # minutes_ago
+  def self.minutes_ago
+    delta.min
+  end
 
-  # hours_ago
+  def self.hours_ago
+    delta.hour
+  end
 
-  # days_ago
+  def self.days_ago
+    delta.day
+  end
 
-  # weeks_ago
+  def self.weeks_ago
+    delta.day / 7 if delta.day > 6 and delta.day || nil
+  end
 
-  # months_ago
+  def self.months_ago
+    delta.month - 1
+  end
 
-  # years_ago
-
-  # decades_ago
-
-  # centuries_ago
-
+  def self.years_ago
+    delta.year - 1970
+  end
 end
 
 ### TESTING ###
 
-old_time_1 = DateTime.new(2013, 05, 15, 6, 32, 55).new_offset(0)
-old_time_2 = DateTime.new(2013, 05, 15, 6, 32, 55).new_offset(1)
-old_time_3 = DateTime.new(2013, 05, 15, 6, 32, 55).new_offset(2)
-old_time_4 = DateTime.new(2013, 05, 15, 6, 32, 55).new_offset(3)
-old_time_5 = DateTime.new(2013, 05, 15, 6, 32, 55).new_offset(4)
-old_time_6 = DateTime.new(2013, 05, 15, 6, 32, 55).new_offset(5)
+time_array = []
 
-puts EverAgo.delta_datetime old_time_1
+time_array << Time.new(2013, 06, 15, 6, 32, 55)
+time_array << Time.new(2013, 06, 15, 6, 32, 55, "+03:00")
+time_array << Time.new(2013, 06, 15, 6, 32, 55, "-09:00")
+time_array << Time.new(2013, 06, 15, 6, 32, 55, "+09:00")
+time_array << Time.new(2013, 06, 15, 6, 32, 55, "-01:00")
+time_array << Time.new(2013, 06, 15, 6, 32, 55, "+08:00")
+# pass a datetime...
+
+EverAgo.delta_time time_array[2]
+
+puts "years -> #{EverAgo.years_ago}"
+puts "months -> #{EverAgo.months_ago}"
+puts "weeks -> #{EverAgo.weeks_ago}"
+puts "days -> #{EverAgo.days_ago}"
+puts "hours -> #{EverAgo.hours_ago}"
+puts "minutes -> #{EverAgo.minutes_ago}"
+puts "seconds -> #{EverAgo.seconds_ago}"
