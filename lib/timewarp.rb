@@ -1,6 +1,6 @@
 require 'date'
 
-class EverAgo
+class TimeWarp
 
   def self.delta_time ot
     @old_time = ot

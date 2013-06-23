@@ -1,4 +1,4 @@
-# EverAgo
+# TimeWarp
 
 **Disclaimer:** I guarantee nothing.
 
@@ -7,20 +7,20 @@
 ### Installation
 
 ```
-$ gem install everago
+$ gem install TimeWarp
 ```
 
 ### Including
 
 ```ruby
-> require 'everago'
+> require 'TimeWarp'
 ```
 
 ### Initialization
 
 ```ruby
 # pass your previous Time object
->  EverAgo.delta_time Time.new(2006, 01, 02, 13, 43, 51)
+>  TimeWarp.delta_time Time.new(2006, 01, 02, 13, 43, 51)
 => 2006-01-02 13:43:51 -0700
 ```
 
@@ -29,14 +29,14 @@ $ gem install everago
 #### Years Ago
 
 ```ruby
-EverAgo.years_ago
+TimeWarp.years_ago
 # => 7
 ```
 
 #### Months Ago
 
 ```ruby
-EverAgo.months_ago
+TimeWarp.months_ago
 # => 5
 ```
 
@@ -47,27 +47,27 @@ EverAgo.months_ago
 #### Days Ago
 
 ```ruby
-EverAgo.days_ago
+TimeWarp.days_ago
 # => 22
 ```
 
 #### Hours Ago
 
 ```ruby
-EverAgo.days_ago
+TimeWarp.days_ago
 # => 22
 ```
 
 #### Minutes Ago
 
 ```ruby
-EverAgo.minutes_ago
+TimeWarp.minutes_ago
 # => 20
 ```
 
 #### Seconds Ago
 
 ```ruby
-EverAgo.seconds_ago
+TimeWarp.seconds_ago
 # => 45
 ```
