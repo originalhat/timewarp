@@ -6,7 +6,7 @@
 
 ### Installation
 
-https://rubygems.org/gems/TimeWarp
+https://rubygems.org/gems/timewarp
 
 ### Initialization
 
