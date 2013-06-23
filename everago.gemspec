@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'everago'
-  s.version = '0.0.1'
+  s.version = '0.1.0'
   s.date = '2013-05-22'
   s.summary = "get time ago in a human readable string"
   s.description = "get time ago in a human readable string"
