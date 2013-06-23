@@ -6,6 +6,8 @@
 
 ### Installation
 
+https://rubygems.org/gems/TimeWarp
+
 ```
 $ gem install TimeWarp
 ```
