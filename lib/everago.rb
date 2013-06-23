@@ -46,25 +46,3 @@ class EverAgo
     delta.year - 1970
   end
 end
-
-### TESTING ###
-
-time_array = []
-
-time_array << Time.new(2013, 06, 15, 6, 32, 55)
-time_array << Time.new(2013, 06, 15, 6, 32, 55, "+03:00")
-time_array << Time.new(2013, 06, 15, 6, 32, 55, "-09:00")
-time_array << Time.new(2013, 06, 15, 6, 32, 55, "+09:00")
-time_array << Time.new(2013, 06, 15, 6, 32, 55, "-01:00")
-time_array << Time.new(2013, 06, 15, 6, 32, 55, "+08:00")
-# pass a datetime...
-
-EverAgo.delta_time time_array[2]
-
-puts "years -> #{EverAgo.years_ago}"
-puts "months -> #{EverAgo.months_ago}"
-puts "weeks -> #{EverAgo.weeks_ago}"
-puts "days -> #{EverAgo.days_ago}"
-puts "hours -> #{EverAgo.hours_ago}"
-puts "minutes -> #{EverAgo.minutes_ago}"
-puts "seconds -> #{EverAgo.seconds_ago}"
