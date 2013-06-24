@@ -2,7 +2,7 @@ require 'date'
 
 class TimeWarp
 
-  def self.delta_time ot
+  def self.set_delta_time ot
     @old_time = ot
   end
 

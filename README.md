@@ -12,7 +12,7 @@ https://rubygems.org/gems/timewarp
 
 ```ruby
 # pass your previous Time object
->  TimeWarp.delta_time Time.new(2006, 01, 02, 13, 43, 51)
+>  TimeWarp.set_delta_time Time.new(2006, 01, 02, 13, 43, 51)
 => 2006-01-02 13:43:51 -0700
 ```
 
