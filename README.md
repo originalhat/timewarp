@@ -1,7 +1,5 @@
 # TimeWarp
 
-**Disclaimer:** I guarantee nothing.
-
 ## Usage
 
 ### Installation
@@ -62,11 +60,4 @@ TimeWarp.minutes_ago
 ```ruby
 TimeWarp.seconds_ago
 # => 45
-```
-
-## Why Use This Gem?
-
-```ruby
-puts "You're something is #{TimeWarp.months_ago} months old."
-# => You're something is 6 months old.
 ```
